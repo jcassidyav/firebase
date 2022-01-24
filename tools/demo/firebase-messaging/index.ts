@@ -22,12 +22,14 @@ export class DemoSharedFirebaseMessaging extends DemoSharedBase {
 							.then((bioResult) => {
 								console.log(JSON.stringify(bioResult));
 
-								Http.getString('https://httpbin.org/get')
-									.then((value) => console.log(value))
+								return Http.getString('https://httpbin.org/get')
+									.then((value) => {
+										console.log(value);
+										alert('got http result');
+										return true;
+									})
 									.catch((ex) => console.log('catch', ex))
 									.finally(() => console.log('finally'));
-
-								return true;
 							})
 							.catch((err) => {
 								console.log(JSON.stringify(err));
