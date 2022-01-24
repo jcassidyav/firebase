@@ -7,7 +7,7 @@
         <ScrollView class="h-full">
           <StackLayout>
             <Button text="Test firebase-messaging" tap="{{ testIt }}" class="btn btn-primary"/>
-
+            <TextField text="hello"/>
           </StackLayout>
         </ScrollView>
     </StackLayout>

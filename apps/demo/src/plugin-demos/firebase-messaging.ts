@@ -11,7 +11,6 @@ export class DemoModel extends DemoSharedFirebaseMessaging {
 	constructor() {
 		super();
 
-
 		// firebase().messaging().getToken().then(token =>{
 		// 	console.log('getToken', token);
 		// }).catch(e =>{
@@ -32,14 +31,13 @@ export class DemoModel extends DemoSharedFirebaseMessaging {
 			await messaging.deleteToken();
 			let token = await messaging.getToken();
 			console.log('token', token);
-		} catch (err) {
-		}
+		} catch (err) {}
 	}
 
 	async issue_17() {
 		var messaging = firebase().messaging();
 		const status = await messaging.requestPermission({ ios: { alert: true } });
 		console.log('status', status);
-		console.log('status', status === AuthorizationStatus.AUTHORIZED)
+		console.log('status', status === AuthorizationStatus.AUTHORIZED);
 	}
 }
