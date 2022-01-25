@@ -2,6 +2,7 @@ import { runNativeScriptAngularApp, platformNativeScript, NativeScriptNgZone } f
 import { AppModule } from './app.module';
 
 import { firebase } from '@nativescript/firebase-core';
+import '@nativescript/firebase-messaging';
 
 console.log('*********Atempt to init firebase************');
 
